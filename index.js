@@ -1,20 +1,28 @@
-console.log(undefined);
-console.log(undefined);
+// начинаются с буквы или с _ или $ 
+// не содержит пробелов 
+// регистрозависимые
+// отвечает на вопрос что в ней
 
-// boolean
-console.log(true);
-console.log(false);
 
-// string
-console.log('true');
-console.log("true");
-console.log("I'm a teacher")
 
-// numeric
-console.log(12345678);
-console.log(123.45678);
-console.log(-Infinity);
-console.log(NaN);
 
-// bigint
-console.log(1n);
+
+// console.log(userName, userSname);
+{
+    let userName="Sabina";
+    console.log("in block-", userName)
+}
+
+let userName; 
+console.log(userName);
+userName = "Brad";
+console.log(userName);
+
+
+const userSname = "Pitt";
+
+console.log(userName, userSname);
+
+const userGender = "male";
+
+console.log(userName, userSname, userGender);
