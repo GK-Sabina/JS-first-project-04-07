@@ -1,67 +1,160 @@
-// Remainder
+// >,<,>=
 
-// let value1 = 4;
-// let value2 = 7; 
-// let result = value1 % value2;
+// const value1 = 10;
 
-// let result = (2+3)*2
-// console.log(result);
+// // console.log(value1 > 12);
+// // console.log(value1 < 12);
+
+// // console.log(value1 <= 12);
+// // console.log(value1 >= 10);
+
+// const value2 = 'text';
+// console.log(value2 > 'text')
+// console.log(value2 > 'qwerty')
+
+// console.log ('100' > '12');
+
+// ==, ===
+
+// const value1 = 10;
+
+// console.log (value1 == 10);
+// console.log (value1 === 10);
+
+// console.log (value1 == '10');
+// console.log (value1 === '10');
+
+// !==, !=
+
+// const value1 = 10;
+
+// console.log (value1 != 10);
+// console.log (value1 !== 10);
+
+// console.log (value1 != '10');
+// console.log (value1 !== '10');
+
+// !
+
+// console.log(!5); //false
+// console.log(!(5-5)); //true
+
+// console.log(!!5); //true
+// console.log(!!""); //false
+
+// console.log(Boolean(5)); //true
+// console.log(Boolean('')); //false
+
+// logical AND (&&) умножение
+// console.log(true && true); //true
+// console.log(true && false); //false
+// console.log(false && true); //false
+// console.log(false && false); //false
+
+// // logical AND (||) прибавление
+// console.log(true || true); //true
+// console.log(true || false); //true
+// console.log(false || true); //true
+// console.log(false || false); //false
+
+// // AND возвращает или последнюю правду или первую неправду
+
+// const condition1 = 10 && null && 'qwe';
+// console.log(condition1);
+
+// //OR возвращает или первая правду или последняя неправду
+// const condition2 = 10 || null || '';
+// console.log(condition2);
+
+// console.log(10 > 2 || 'a' === 'b'); //true
+
+// const value = 5;
+// console.log(2<value && value<7);
+// console.log(2<value || value<7);
+
+// const condition = '' && (10 || 'qwe');
+// console.log(condition);
+
+// Nullish coalescing operator (??)
+// let avatar;
+// const condition2 = avatar ?? 'anon.png';
+// console.log(condition2);
 
 
+//if
+// const condition = true;
+// // if (condition) {
+// //     console.log('true')
+// // } 
 
-//Assignment
+// if (condition ===false) {
+//     console.log('true')
+// } else {
+//     console.log('false')
+// }
 
-// let value1 = 2;
+// const number = 0;
+// if (number === 0) {
+//         console.log('ok')
+//     } else {
+//         console.log('no')
+//      }
+        
+//  const number2 = 2;
+//  if (number2 >= 0) {
+//     console.log('ok')
+//  } else {
+//     console.log('no')
+//  }
 
-// // value1 = value1*3; 6=2*3
-// value1 *= 3;
+const number2 = 4;
+if (number2 % 2){
+    console.log('odd')
+} else {
+    console.log('even')
+}
 
-// // value1 = value1/2; 3=6/2
-// value1 /= 2;
+//или
 
-// // value1 = value1+8; 11=3+8
-// value1 +=8;
+const number3 = 5;
+if (number3%2 === 0){
+    console.log('even')
+} else {
+    console.log('odd')
+}
 
-// value1 = value1 * 2 + 4;
-// value1 = value1 + 2 * 4;
+// если число добавляемое - +
+// если отнимаемое - -
+// остальное - 0
+const number = -4;
+if (number>0){
+    console.log('+')
+} else if(number<0){
+    console.log('-')
+} else {
+    console.log('0')
+}
 
-// // value1-= 5
-// value1 -= value2;
+//если число добавляемое + и меньше 5 то + если нет то -
+// const number4 = 3;
+// if(number4>0 && number4<5){
+//     console.log('+')
+// } else {
+//     console.log('-')
+// }
 
-// let userName = 'Brad';
-// let userSname = 'Pitt';
-// userName += userSname;
+const number4 = 2;
+if(number4<=0 || number4>=5){
+    console.log('no')
+} else {
+    console.log('ok')
+}
 
-
-
-// Exponentiation (**) 2**3=8
-
-let value1 = 9;
-let value2 = 2;
-// let value3 = 0.5;
-
-let result = value1 ** value2;
-console.log(result)
-
-// let result2 = (-value1) ** value3;
-// console.log(result2)
-
-
-
-// increment/decrement
-
-// let value1 = 1;
-// let value2 = 2;
-
-// // // value1++; 
-// // console.log('++value1', ++value1)
-
-// // value2--;
-// // console.log('value2', value2)
-
-// // =5
-// let result = ++value1 + ++value1;
-
-// // =3
-// let result1 = value1++ + value1++;
-
+let number10 = 0;
+const minValue = 0;
+const maxValue = 5;
+if (number10 > minValue && number10 < maxValue) {
+    console.log('ok')
+} else {
+    console.log('no')
+}
