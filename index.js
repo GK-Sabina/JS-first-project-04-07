@@ -1,50 +1,67 @@
-// начинаются с буквы или с _ или $ 
-// не содержит пробелов 
-// регистрозависимые
-// отвечает на вопрос что в ней
+// Remainder
 
-// console.log(userName, userSname);
-// {
-//     let userName="Sabina";
-//     console.log("in block-", userName)
-// }
+// let value1 = 4;
+// let value2 = 7; 
+// let result = value1 % value2;
 
-// let userName; 
-// console.log(userName);
-// userName = "Brad";
-// console.log(userName);
+// let result = (2+3)*2
+// console.log(result);
 
 
-// const userSname = "Pitt";
 
-// console.log(userName, userSname);
+//Assignment
 
-// const userGender = "male";
+// let value1 = 2;
 
-// console.log(userName, userSname, userGender);
+// // value1 = value1*3; 6=2*3
+// value1 *= 3;
 
-// const userAge = 23; -Number
-// const isAdult = true; -Boolean
-// const programmingLanguage = "C++"; -String
-// const typePets = null; -null
-// const counterDaysWeek = 7; -Number
+// // value1 = value1/2; 3=6/2
+// value1 /= 2;
 
-const AMOUNT_DAYS_OF_WEEK = 7;
+// // value1 = value1+8; 11=3+8
+// value1 +=8;
 
-let programLang = 'C++';
+// value1 = value1 * 2 + 4;
+// value1 = value1 + 2 * 4;
 
-let sens = "I'm a \nteacher";
-console.log(sens);
+// // value1-= 5
+// value1 -= value2;
 
-let value1 = "12";
-let value2 = null;
+// let userName = 'Brad';
+// let userSname = 'Pitt';
+// userName += userSname;
 
-let result1 = value1 + value2;
-let result2 = value1 - value2;
-let result3 = value1 * value2;
-let result4 = value1 / value2;
 
-console.log('+', result1, typeof result1);
-console.log('-', result2, typeof result2);
-console.log('*', result3, typeof result3);
-console.log('/', result4, typeof result4);
+
+// Exponentiation (**) 2**3=8
+
+let value1 = 9;
+let value2 = 2;
+// let value3 = 0.5;
+
+let result = value1 ** value2;
+console.log(result)
+
+// let result2 = (-value1) ** value3;
+// console.log(result2)
+
+
+
+// increment/decrement
+
+// let value1 = 1;
+// let value2 = 2;
+
+// // // value1++; 
+// // console.log('++value1', ++value1)
+
+// // value2--;
+// // console.log('value2', value2)
+
+// // =5
+// let result = ++value1 + ++value1;
+
+// // =3
+// let result1 = value1++ + value1++;
+
