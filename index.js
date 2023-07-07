@@ -1,160 +1,123 @@
-// >,<,>=
+// const userInput = prompt('Enter number', 5);
 
-// const value1 = 10;
+// // console.log(Number(userInput));
 
-// // console.log(value1 > 12);
-// // console.log(value1 < 12);
-
-// // console.log(value1 <= 12);
-// // console.log(value1 >= 10);
-
-// const value2 = 'text';
-// console.log(value2 > 'text')
-// console.log(value2 > 'qwerty')
-
-// console.log ('100' > '12');
-
-// ==, ===
-
-// const value1 = 10;
-
-// console.log (value1 == 10);
-// console.log (value1 === 10);
-
-// console.log (value1 == '10');
-// console.log (value1 === '10');
-
-// !==, !=
-
-// const value1 = 10;
-
-// console.log (value1 != 10);
-// console.log (value1 !== 10);
-
-// console.log (value1 != '10');
-// console.log (value1 !== '10');
-
-// !
-
-// console.log(!5); //false
-// console.log(!(5-5)); //true
-
-// console.log(!!5); //true
-// console.log(!!""); //false
-
-// console.log(Boolean(5)); //true
-// console.log(Boolean('')); //false
-
-// logical AND (&&) умножение
-// console.log(true && true); //true
-// console.log(true && false); //false
-// console.log(false && true); //false
-// console.log(false && false); //false
-
-// // logical AND (||) прибавление
-// console.log(true || true); //true
-// console.log(true || false); //true
-// console.log(false || true); //true
-// console.log(false || false); //false
-
-// // AND возвращает или последнюю правду или первую неправду
-
-// const condition1 = 10 && null && 'qwe';
-// console.log(condition1);
-
-// //OR возвращает или первая правду или последняя неправду
-// const condition2 = 10 || null || '';
-// console.log(condition2);
-
-// console.log(10 > 2 || 'a' === 'b'); //true
-
-// const value = 5;
-// console.log(2<value && value<7);
-// console.log(2<value || value<7);
-
-// const condition = '' && (10 || 'qwe');
-// console.log(condition);
-
-// Nullish coalescing operator (??)
-// let avatar;
-// const condition2 = avatar ?? 'anon.png';
-// console.log(condition2);
-
-
-//if
-// const condition = true;
-// // if (condition) {
-// //     console.log('true')
-// // } 
-
-// if (condition ===false) {
-//     console.log('true')
+// if(userInput === '' || userInput === null || Number.isNaN(Number(userInput))){
+//     console.log('error!');
 // } else {
-//     console.log('false')
+//     console.log('done!');
 // }
 
-// const number = 0;
-// if (number === 0) {
-//         console.log('ok')
-//     } else {
-//         console.log('no')
-//      }
-        
-//  const number2 = 2;
-//  if (number2 >= 0) {
-//     console.log('ok')
-//  } else {
-//     console.log('no')
-//  }
 
-const number2 = 4;
-if (number2 % 2){
-    console.log('odd')
-} else {
-    console.log('even')
-}
-
-//или
-
-const number3 = 5;
-if (number3%2 === 0){
-    console.log('even')
-} else {
-    console.log('odd')
-}
-
-// если число добавляемое - +
-// если отнимаемое - -
-// остальное - 0
-const number = -4;
-if (number>0){
-    console.log('+')
-} else if(number<0){
-    console.log('-')
-} else {
-    console.log('0')
-}
-
-//если число добавляемое + и меньше 5 то + если нет то -
-// const number4 = 3;
-// if(number4>0 && number4<5){
-//     console.log('+')
-// } else {
-//     console.log('-')
+// //declaration
+// function myFirstFunction(){
+//     console.log('myFirstFunction');
 // }
 
-const number4 = 2;
-if(number4<=0 || number4>=5){
-    console.log('no')
-} else {
-    console.log('ok')
-}
+// myFirstFunction()
+// console.log(myFirstFunction);
 
-let number10 = 0;
-const minValue = 0;
-const maxValue = 5;
-if (number10 > minValue && number10 < maxValue) {
-    console.log('ok')
-} else {
-    console.log('no')
+
+// //expression
+// const mySecondFunction = function (){
+//     console.log('mySecondFunction');
+// }
+
+// mySecondFunction();
+// console.log(mySecondFunction);
+
+//функция суммы 2 чисел
+// function getSumTwoNums(){
+//     const userInput1 = prompt('Enter number', 5);
+//     const userInput2 = prompt('Enter number', 5);
+
+//     const isUserInputsNotNumber = 
+//         userInput1 === '' || 
+//         userInput1 === null || 
+//         Number.isNaN(Number(userInput1)) || 
+//         userInput2 === '' || 
+//         userInput2 === null || 
+//         Number.isNaN(Number(userInput2));
+    
+//     if(isUserInputsNotNumber){
+//         console.log('error');
+//     } else{
+//         const summa = Number(userInput1) + Number(userInput2);
+//         console.log(userInput1, '+', userInput2, '=', summa);
+//     }
+// }
+
+// getSumTwoNums()
+
+
+// //return
+
+// const userInput1 = prompt('Enter number', 5);
+// const userInput2 = prompt('Enter number', 5);
+
+// const isUserInputsNotNumber = 
+//     userInput1 === '' || 
+//     userInput1 === null || 
+//     Number.isNaN(Number(userInput1)) || 
+//     userInput2 === '' || 
+//     userInput2 === null || 
+//     Number.isNaN(Number(userInput2));
+
+// function getSumTwoNums(number1, number2){
+//     return Number(number1) + Number(number2);
+//     }
+
+//   if(isUserInputsNotNumber){
+//      console.log('error');
+//    } else{
+//     const summa = getSumTwoNums(userInput1, userInput2);
+//      console.log(userInput1, '+', userInput2, '=', summa);
+//      console.log(3, '+', 8, '=', getSumTwoNums(3, 8));
+//    }
+
+
+//опимитизация 
+
+const userInput1 = prompt('Enter number', 5);
+const userInput2 = prompt('Enter number', 5);
+
+const isNotNumber = function(value){
+    return value === '' ||
+    value === null ||
+    Number.isNaN(Number(value)); //true
 }
+const isUserInputsNotNumber = isNotNumber(userInput1) || isNotNumber(userInput2);
+
+/**
+ * 
+ * @param {*} number1
+ * @param {*} number2
+ * @returns {number | BigInt | boolean}
+*/
+
+function getSumTwoNums(number1, number2){
+    if( (Number(number1) + Number(number2)) <= Number.MAX_SAFE_INTEGER &&
+        (typeof number1 === 'number' || typeof number2 === 'string') &&
+        typeof number1 === typeof number2
+    ) {
+    return Number(number1) + Number(number2);
+    }
+    if(
+        (typeof number1 === 'bigint' && typeof number2 === 'bigint') 
+    ) {
+    return BigInt(number1) + BigInt(number2);
+    }
+    return false;
+    }
+    
+    if(isUserInputsNotNumber){
+       console.log('error');
+    } else{
+       const summa = getSumTwoNums(userInput1, userInput2);
+       console.log(userInput1, '+', userInput2, '=', summa);
+    }
+
+    console.log(3, '+', 8, '=', getSumTwoNums(3, 8));
+    console.log(3n, '+', 8, '=', getSumTwoNums(3n, 8n));
+    console.log('3', '+', '8', '=', getSumTwoNums('3', '8'));
+    console.log(undefined, '+', '8', '=', getSumTwoNums(undefined, '8'));
