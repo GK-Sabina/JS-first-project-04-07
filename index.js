@@ -1,126 +1,4 @@
-// const userInput = prompt('Enter number', 5);
 
-// // console.log(Number(userInput));
-
-// if(userInput === '' || userInput === null || Number.isNaN(Number(userInput))){
-//     console.log('error!');
-// } else {
-//     console.log('done!');
-// }
-
-
-// //declaration
-// function myFirstFunction(){
-//     console.log('myFirstFunction');
-// }
-
-// myFirstFunction()
-// console.log(myFirstFunction);
-
-
-// //expression
-// const mySecondFunction = function (){
-//     console.log('mySecondFunction');
-// }
-
-// mySecondFunction();
-// console.log(mySecondFunction);
-
-//функция суммы 2 чисел
-// function getSumTwoNums(){
-//     const userInput1 = prompt('Enter number', 5);
-//     const userInput2 = prompt('Enter number', 5);
-
-//     const isUserInputsNotNumber = 
-//         userInput1 === '' || 
-//         userInput1 === null || 
-//         Number.isNaN(Number(userInput1)) || 
-//         userInput2 === '' || 
-//         userInput2 === null || 
-//         Number.isNaN(Number(userInput2));
-    
-//     if(isUserInputsNotNumber){
-//         console.log('error');
-//     } else{
-//         const summa = Number(userInput1) + Number(userInput2);
-//         console.log(userInput1, '+', userInput2, '=', summa);
-//     }
-// }
-
-// getSumTwoNums()
-
-
-// //return
-
-// const userInput1 = prompt('Enter number', 5);
-// const userInput2 = prompt('Enter number', 5);
-
-// const isUserInputsNotNumber = 
-//     userInput1 === '' || 
-//     userInput1 === null || 
-//     Number.isNaN(Number(userInput1)) || 
-//     userInput2 === '' || 
-//     userInput2 === null || 
-//     Number.isNaN(Number(userInput2));
-
-// function getSumTwoNums(number1, number2){
-//     return Number(number1) + Number(number2);
-//     }
-
-//   if(isUserInputsNotNumber){
-//      console.log('error');
-//    } else{
-//     const summa = getSumTwoNums(userInput1, userInput2);
-//      console.log(userInput1, '+', userInput2, '=', summa);
-//      console.log(3, '+', 8, '=', getSumTwoNums(3, 8));
-//    }
-
-
-//опимитизация 
-
-// const userInput1 = prompt('Enter number', 5);
-// const userInput2 = prompt('Enter number', 5);
-
-// const isNotNumber = function(value){
-//     return value === '' ||
-//     value === null ||
-//     Number.isNaN(Number(value)); //true
-// }
-// const isUserInputsNotNumber = isNotNumber(userInput1) || isNotNumber(userInput2);
-
-// /**
-//  * 
-//  * @param {*} number1
-//  * @param {*} number2
-//  * @returns {number | BigInt | boolean}
-// */
-
-// function getSumTwoNums(number1, number2){
-//     if( (Number(number1) + Number(number2)) <= Number.MAX_SAFE_INTEGER &&
-//         (typeof number1 === 'number' || typeof number2 === 'string') &&
-//         typeof number1 === typeof number2
-//     ) {
-//     return Number(number1) + Number(number2);
-//     }
-//     if(
-//         (typeof number1 === 'bigint' && typeof number2 === 'bigint') 
-//     ) {
-//     return BigInt(number1) + BigInt(number2);
-//     }
-//     return false;
-//     }
-    
-//     if(isUserInputsNotNumber){
-//        console.log('error');
-//     } else{
-//        const summa = getSumTwoNums(userInput1, userInput2);
-//        console.log(userInput1, '+', userInput2, '=', summa);
-//     }
-
-//     console.log(3, '+', 8, '=', getSumTwoNums(3, 8));
-//     console.log(3n, '+', 8, '=', getSumTwoNums(3n, 8n));
-//     console.log('3', '+', '8', '=', getSumTwoNums('3', '8'));
-//     console.log(undefined, '+', '8', '=', getSumTwoNums(undefined, '8'));
 
 
 
@@ -179,16 +57,83 @@
 
 //User age
 
-const ageAdult = 19;
+const userAge = 19;
 
 /**
  * @param {number} userAge - integer positive
  * @param {number} ageAdult default 18 - integer positive
  * @returns {boolean}
  */
-const isUserAdult = function (userAge, ageAdult = 18){
+const isUserAdult = function (userAge = 18, ageAdult = 18){
     return userAge >= ageAdult;
 }
-
+console.log(isUserAdult()); //true
+console.log(isUserAdult(undefined, 21)); //false
 console.log(isUserAdult(userAge)); //true
 console.log(isUserAdult(userAge, 21)); //false
+
+// // check multiplicity
+
+// const number1 = 8;
+// const number2 = 4;
+
+// /**
+//  * @param {number} number1
+//  * @param {number} number2
+//  * @returns {boolean}
+//  */
+
+// const checkMultiplicity = function (number1, number2){
+//     return number1 % number2 === 0;
+// }
+
+//triangle
+
+const side1 = 8;
+const side2 = 4;
+const side3 = 6;
+
+/**
+ * @param {number} side1
+ * @param {number} side2
+ * @param {number} side3
+ * @returns {boolean}
+ */
+
+const checkTriangle = function (side1, side2, side3){
+    return side1 + side2 > side3 && 
+    side1 + side3 > side2 && 
+    side2 + side3 > side1 &&
+    side1 > 0 && side2 > 0 && side3 >0;
+}
+
+
+//practice написати функцію calcResult, яка приймає два цілі числа
+// і повертає:
+// - якщо обидва парні - суму чисел
+// - якщо обидва непарні - множення чисел
+// - якщо різні - повертає непарне число
+
+const number1 = 8;
+const number2 = 4;
+
+/**
+ * @param {number} number1
+ * @param {number} number2
+ * @returns {number}
+ */
+
+const calcResult = function (number1, number2){
+    if (number1 % 2 === 0 && number2 % 2 === 0){
+        return number1 + number2;
+    } 
+    if (number1 % 2 === 1 && number2 % 2 === 1){
+        return number1 * number2;
+    } 
+    if (number1 % 2 === 0 && number2 % 2 === 1){
+        return number2;
+    }
+    if (number1 % 2 === 1 && number2 % 2 === 0) {
+        return number1;
+    }
+}
