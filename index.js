@@ -126,15 +126,69 @@
 
 //Homework - function - Sabina
 
-function getSomethingFromTheUser(){
+// function getSomethingFromTheUser(){
     
- const userInput = prompt('Enter something', 'OK');
+//  const userInput = prompt('Enter something', 'OK');
     
- if (userInput === '' || userInput === null){
-    return 'Try again';
-    } else {
-    return userInput;
- }
+//  if (userInput === '' || userInput === null){
+//     return 'Try again';
+//     } 
+//     return userInput;
+// }
+
+// console.log(getSomethingFromTheUser());
+
+
+//периметр квадрата
+
+// const sideSquare = 3;
+
+// /**
+//  * @param {number} side
+//  * @returns {number | NaN}
+//  */
+  
+// //  delete sideSquare;
+
+// // const getPerimetrSquare = function (){
+// //     const perimetr = 4 * sideSquare;
+// //     return perimetr;
+// // }
+
+// const getPerimetrSquare = function(side=1){ //let side =1;
+//     if(side<=0){
+//        return NaN; //null
+//     }
+//     return 4 * side;
+// };
+
+// const value = -3;
+// const result = getPerimetrSquare(value); // NaN
+
+// if(Number.isNaN(getPerimetrSquare(-3))){
+//     console.log('wrong argument');
+// }else{
+//     console.log('result = ', result);
+// };
+
+// console.log(getPerimetrSquare(8)); //sideSquare = 8
+// console.log(getPerimetrSquare(sideSquare)); //sideSquare = sideSquare
+// console.log(getPerimetrSquare()); //по умолчанию (1 тк function(side=1))
+// console.log(getPerimetrSquare('one')); //NaN tk text
+
+
+//User age
+
+const ageAdult = 19;
+
+/**
+ * @param {number} userAge - integer positive
+ * @param {number} ageAdult default 18 - integer positive
+ * @returns {boolean}
+ */
+const isUserAdult = function (userAge, ageAdult = 18){
+    return userAge >= ageAdult;
 }
- 
-console.log(getSomethingFromTheUser());
+
+console.log(isUserAdult(userAge)); //true
+console.log(isUserAdult(userAge, 21)); //false
