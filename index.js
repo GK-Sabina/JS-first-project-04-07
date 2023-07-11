@@ -1,139 +1,163 @@
+// ternary operator/ (condition)?true:false;
 
+const logParity = function(number){
+    // if(number % 2 === 0){
+    //     return 'even';
+    // }
+    //     return 'odd'; //это можно заметинить тернарным оператором/ниже 
+    return (number % 2 === 0) ? 'even' : 'odd';
+};
 
+const isEven = function(number){
+    return number % 2 === 0;
+};
 
+const isAdult = function(age, AGE_ADULT = 18){
+    return age>=AGE_ADULT;
+};
 
-//Homework - function - Sabina
-
-// function getSomethingFromTheUser(){
-    
-//  const userInput = prompt('Enter something', 'OK');
-    
-//  if (userInput === '' || userInput === null){
-//     return 'Try again';
-//     } 
-//     return userInput;
-// }
-
-// console.log(getSomethingFromTheUser());
-
-
-//периметр квадрата
-
-// const sideSquare = 3;
-
-// /**
-//  * @param {number} side
-//  * @returns {number | NaN}
-//  */
-  
-// //  delete sideSquare;
-
-// // const getPerimetrSquare = function (){
-// //     const perimetr = 4 * sideSquare;
-// //     return perimetr;
-// // }
-
-// const getPerimetrSquare = function(side=1){ //let side =1;
-//     if(side<=0){
-//        return NaN; //null
-//     }
-//     return 4 * side;
-// };
-
-// const value = -3;
-// const result = getPerimetrSquare(value); // NaN
-
-// if(Number.isNaN(getPerimetrSquare(-3))){
-//     console.log('wrong argument');
-// }else{
-//     console.log('result = ', result);
-// };
-
-// console.log(getPerimetrSquare(8)); //sideSquare = 8
-// console.log(getPerimetrSquare(sideSquare)); //sideSquare = sideSquare
-// console.log(getPerimetrSquare()); //по умолчанию (1 тк function(side=1))
-// console.log(getPerimetrSquare('one')); //NaN tk text
-
-
-//User age
-
-const userAge = 19;
-
-/**
- * @param {number} userAge - integer positive
- * @param {number} ageAdult default 18 - integer positive
- * @returns {boolean}
- */
-const isUserAdult = function (userAge = 18, ageAdult = 18){
-    return userAge >= ageAdult;
-}
-console.log(isUserAdult()); //true
-console.log(isUserAdult(undefined, 21)); //false
-console.log(isUserAdult(userAge)); //true
-console.log(isUserAdult(userAge, 21)); //false
-
-// // check multiplicity
-
-// const number1 = 8;
-// const number2 = 4;
-
-// /**
-//  * @param {number} number1
-//  * @param {number} number2
-//  * @returns {boolean}
-//  */
-
-// const checkMultiplicity = function (number1, number2){
-//     return number1 % number2 === 0;
-// }
-
-//triangle
-
-const side1 = 8;
-const side2 = 4;
-const side3 = 6;
-
-/**
- * @param {number} side1
- * @param {number} side2
- * @param {number} side3
- * @returns {boolean}
- */
-
-const checkTriangle = function (side1, side2, side3){
-    return side1 + side2 > side3 && 
-    side1 + side3 > side2 && 
-    side2 + side3 > side1 &&
-    side1 > 0 && side2 > 0 && side3 >0;
+const logAdult = function(age, AGE_ADULT = 18){
+    return(age>=AGE_ADULT) ? 'adult' : 'notAdult';
 }
 
+const promoCode = 'qwerty';
+const sale = promoCode ? 10 : 0;
 
-//practice написати функцію calcResult, яка приймає два цілі числа
-// і повертає:
-// - якщо обидва парні - суму чисел
-// - якщо обидва непарні - множення чисел
-// - якщо різні - повертає непарне число
 
-const number1 = 8;
-const number2 = 4;
+//функция если пользователь что то вводит то thank you если отмена или ничего то error возвращаем с помощью тернарного оператора 
+// const userInput = prompt('Enter something', 5);
+// const checkInput = function(userInput){
+// return (userInput==='' || userInput===null) ? 'error' : 'thank you';
+// }
 
-/**
- * @param {number} number1
- * @param {number} number2
- * @returns {number}
- */
+//Никогда не делай так!
+const logSignNumber = function(number=0){
+    return number>0 ? '+' : number<0 ? '-' : '0'
+};
+//debugger
+// console.log(logSignNumber(12));
 
-const calcResult = function (number1, number2){
-    if (number1 % 2 === 0 && number2 % 2 === 0){
-        return number1 + number2;
-    } 
-    if (number1 % 2 === 1 && number2 % 2 === 1){
-        return number1 * number2;
-    } 
-    if (number1 % 2 === 0 && number2 % 2 === 1){
-        return number2;
-    }
-    if (number1 % 2 === 1 && number2 % 2 === 0) {
-        return number1;
-    }
+
+//switch
+//функция ввыводит прветствие на языке который выберает пользователь
+const userInputLang = prompt('Choose lang:\n1-uk\n2-en\n3-it\n4-de');
+// if(
+//     userInputLang==='1';
+        
+// )
+// if(userInputLang === '1' || userInputLang === 'uk'){
+//     console.log('привіт');
+// } else if(userInputLang === '2' || userInputLang === 'en'){
+//     console.log('hi');
+// } else if(userInputLang === '3' || userInputLang === 'it'){
+//     console.log('ciao');
+// }else if(userInputLang === '4' || userInputLang === 'de'){
+//     console.log('hallo');
+// } else{
+//     console.log('try again');
+
+//  } //этот код можно заменить switch/ниже
+// switch(userInputLang){
+//     case '1':
+//     case 'uk':
+//     case 'UK':
+//     case 'Ukraine':
+//         console.log('привіт');
+//     break;
+//     case '2':
+//         console.log('hi');
+//     break;
+//     case '3':
+//         console.log('ciao');
+//     break;
+//     case '4':
+//         console.log('hallo');
+//     break;
+//     default:
+//     console.log('try again');
+//     break;
+// }
+
+
+// не нужно так делать/лучше через тернарный оператор
+// switch(10>5){
+//     case true:
+//         console.log('ok');
+//         break;
+//      case false:
+//         console.log('wrong');
+//         break; 
+//     default:
+//         break;
+//}
+ 
+//так делать не правильно
+// const key = 50;
+// switch(key){
+//     case key>0 && key<10:
+//         console.log('ok');
+//         break;
+//      case key>10:
+//         console.log('wrong');
+//         break; 
+//     default:
+//         console.log('error');
+//         break;
+// }
+
+
+// const userInputDay = prompt('Enter the day of the week :\n1-Monday\n2-Tuesday\n3-Wednesday\n4-Thursday\n5-Friday\n6-Saturday\n7-Sunday');
+// switch(userInputDay){
+//     case '1':
+//     case '2':
+//     case '3':
+//     case '4':
+//     case '5':
+//         console.log('working day');
+//     break;
+//     case '6':
+//     case '7':
+//         console.log('weekend');
+//     break;
+//     default:
+//         console.log('try again')
+//     break;
+// }
+
+const userInputMonth = prompt('Enter month:n1 - January\n2 - February\n3 - March\n4 - April\n5 - May\n6 - June\n7 - July\n8 - August\n9 - September\n10 - October\n11 - November\n12 - December');
+switch(userInputMonth){
+    case '1':
+    case '2':
+    case '12':
+        console.log('winter');
+    break;
+    case '3':
+    case '4':
+    case '5':
+        console.log('spring');
+    break;
+    case '6':
+    case '7':
+    case '8':
+        console.log('summer');
+    break;
+    case '9':
+    case '10':
+    case '11':
+        console.log('autumn');
+    break;
+    default:
+         console.log('try again')
+     break;
+}
+
+const userInputDay = prompt('Enter the day of the week :\n1-Monday\n2-Tuesday\n3-Wednesday\n4-Thursday\n5-Friday\n6-Saturday\n7-Sunday');
+const userInputToNumber = Number(userInputDay);
+
+if(userInputDay==='' || userInputDay===null || Number.isNaN(userInputToNumber) || userInputToNumber < 1 || userInputToNumber > 7 || Number.isInteger(userInputToNumber)){
+    console.log('error')
+}else if(userInputToNumber >= 1 && userInputToNumber <= 5){
+    console.log('working day')
+}else{
+    console.log('weekend')
 }
